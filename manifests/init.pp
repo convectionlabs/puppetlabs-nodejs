@@ -117,7 +117,7 @@ class nodejs(
     default: {
       package { 'npm':
         name    => $nodejs::params::npm_pkg,
-        ensure  => present,
+        ensure  => $version,
         require => Anchor['nodejs::repo']
       }
     }
